@@ -1,0 +1,1 @@
+{"frequencies":{"1":7.15},"totals":{"totalQsos_all":"11","distinct_all":"11","totalQsos_vhf":"1"},"topOps":{"G4ERO":"4","M0VFC":"3","M0BLF":"3","M1BXF":"1"},"modes":{"SSB":64,"CW":18,"PSK31":9,"RTTY":9},"meta":{"created":"19:59 Sunday 5 May"}}

@@ -1,0 +1,87 @@
+﻿body {
+    background-color:#303030;
+    height: 700px;
+    overflow:hidden;  /*Prevents scroll bar during slide animation*/ 
+}
+
+.slide {
+    margin-left:auto;
+    margin-right:auto;
+    width:66%;
+    min-height: 500px;
+    font-family: Calibri,Arial,sans-serif;
+    font-size: 2.5em;
+    color: white;
+    padding:20px;
+    display:none;
+}
+
+.active {
+    display: block;
+}
+
+.dataDelay {
+    font-style: italic;
+    font-size: 0.5em;
+    color: gray;
+    text-align: right;
+}
+
+h1 {
+    font-size: 0.7em;
+    font-style: italic;
+    border-bottom:1px solid gray;
+    margin-bottom:20px;
+    margin-top: 10px;
+    padding-top: 0px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    width:500px;
+    text-align:center;
+}
+
+.variable {
+    color: yellow;
+}
+
+.gray {
+    color: gray;
+}
+
+.smaller {
+    font-size: 0.8em;
+}
+
+.larger {
+    font-size: 1.2em;
+}
+
+td {
+    padding-right:20px;
+}
+    td.histogram {
+        width:500px;
+        overflow:hidden;
+    }
+    td.opPhoto {
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+    }
+
+div#spinny {
+    position: absolute;
+    top: 300px;
+    width:100%;
+    overflow:hidden;
+    text-align:center;
+    z-index: 10;
+}

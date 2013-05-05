@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CamLog Dashboard</title>
+    <link rel="stylesheet" href="CSS/dashboard.css" />
+    <script src="Scripts/jquery-2.0.0.min.js" type="text/javascript"></script>
+    <script src="Scripts/loadDataFromJson.js" type="text/javascript"></script>
+    <script src="Scripts/slideAnimation.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div id="spinny"><img src="CSS/spinny.gif" /></div>
+
+    <div id="currentFrequencies" class="slide">
+        <div class="dataDelay">Data may be up to 6 minutes old</div>
+        <h1>Current Frequencies</h1>
+        <table id="currentFrequencyTable">
+            <tr>
+                <td>StationName</td>
+                <td class="variable">0.000</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="totalQsos" class="slide">
+        <div class="dataDelay">Data may be up to 6 minutes old</div>
+        <h1>Total QSOs</h1>
+        <div class="centered">
+            <p id="totalQsos_all" class="variable larger">0</p>
+            <p>with <span id="distinct_all" class="variable">0</span> different callsigns</p>
+            <p class="smaller">(VHF: <span id="totalQsos_vhf" class="variable">0</span> QSOs)</p>
+        </div>
+    </div>
+
+    <div id="qsosByOp" class="slide">
+        <div class="dataDelay">Data may be up to 6 minutes old</div>
+        <h1>Operator QSOs</h1>
+        <table id="qsosByOpTable">
+            <tr>
+                <td class="opPhoto">
+                    &nbsp;
+                </td>
+                <td class="histogram" style="width:3px;">
+                    &nbsp;
+                </td>
+                <td class="variable">
+                    0
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div id="modeSplit" class="slide">
+        <div class="dataDelay">Data may be up to 6 minutes old</div>
+        <h1>Modes</h1>
+        <table id="modeSplitTable">
+            <tr>
+                <td>ModeName</td>
+                <td class="histogram" style="width:3px;">
+                    &nbsp;
+                </td>
+                <td class="variable">0</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div id="news" class="slide">
+        <div class="dataDelay">Data may be up to 6 minutes old</div>
+        <h1>News</h1>
+        <p id="newsText">No news</p>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            loadData();
+            doAnimation();
+            $("#spinny").hide();
+        });
+    </script>
+
+</body>
+</html>
