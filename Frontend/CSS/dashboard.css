@@ -23,13 +23,15 @@
 
 .dataDelay {
     font-style: italic;
-    font-size: 0.5em;
+    font-size: 0.4em;
+    padding:0px;
+    margin:0px;
     color: gray;
     text-align: right;
 }
 
 h1 {
-    font-size: 0.7em;
+    font-size: 0.6em;
     font-style: italic;
     border-bottom:1px solid gray;
     margin-bottom:20px;
@@ -96,7 +98,7 @@ div#currentFrequencies {
 }
 
 p#currentFrequencyTable {
-    font-size: 0.8em;
+    font-size: 0.65em;
     margin-top:0.2em;
     padding-top:0px;
     text-align: center;
