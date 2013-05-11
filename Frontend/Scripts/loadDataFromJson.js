@@ -9,7 +9,7 @@
                     $.each(typeData, function (station, freq) {
                         if (freq == null) { freq = "<span class=\"gray\">(No recent QSOs)</span>"; }
                         else { freq = freq.toFixed(3); }
-                        htmlOut += "<span class=\"station\">" + station + "&nbsp;<span class=\"variable\">" + freq + "</span></span>";
+                        htmlOut += "<span class=\"station\">" + station + "&nbsp;<span class=\"variable\">" + freq + "</span></span> ";
                     });
                     $("#currentFrequencyTable").html(htmlOut);
                     break;
