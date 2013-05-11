@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontEnd", "FrontEnd\FrontEnd.csproj", "{CEC35489-5304-4021-944C-5C5358AD6D14}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontend", "Frontend\Frontend.csproj", "{CEC35489-5304-4021-944C-5C5358AD6D14}"
 EndProject
 Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "Backend", "Backend\Backend.phpproj", "{909AD7E7-26C7-4F86-A9DC-CDCA938B14CC}"
 EndProject
