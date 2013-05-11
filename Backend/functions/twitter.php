@@ -20,7 +20,7 @@ function twitterFeedToHtml($feedTerms)
     {
         $tweet = strip_tags($xml->entry[$i]->title);
         $author = strip_tags($xml->entry[$i]->author->name);
-        $feedHtml .= "<p>".$tweet."<br />- " . $author . "</p>";
+        $feedHtml .= "<p class=\"smaller\">".$tweet."<br />- " . $author . "</p>";
     }
     file_put_contents($pathToNews,$feedHtml);
 }
