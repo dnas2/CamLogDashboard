@@ -8,5 +8,6 @@
  
 $dbCredentials = array("host"=>"localhost", "user"=>"USERNAME", "password"=>"PASSWORD", "database"=>"CAMLOGDB");
 $pathToJson = "../Frontend/data.js";
-
+$pathToNews = "../Frontend/news.html";
+$feedTerms = "g3pye mull2013"
 ?>

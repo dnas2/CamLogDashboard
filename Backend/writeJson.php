@@ -7,6 +7,7 @@
 require("config.php");
 include("classes/database.php");
 include("functions/queries.php");
+include("functions/twitter.php");
 date_default_timezone_set('Europe/London');
 
 
@@ -31,6 +32,7 @@ $topOps = getOperatorQsos();
 // Gets the mode split as percentage of all QSOs
 $modes = getModeSplit($totals['totalQsos_all']);
 
+
 $mysql->disconnect();
 
 $meta = array("created"=>date("H:i l j F"));
@@ -39,5 +41,6 @@ $result = array("frequencies"=>$frequencies,"totals"=>$totals,"topOps"=>$topOps,
 $json = json_encode($result);
 
 file_put_contents($pathToJson,$json);
+twitterFeedToHtml($feedTerms);
 
 ?>

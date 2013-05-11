@@ -27,6 +27,9 @@
     <Compile Include="functions\queries.php">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="functions\twitter.php">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="writeJson.php" />
   </ItemGroup>
   <ItemGroup>
