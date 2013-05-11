@@ -11,18 +11,7 @@
 
     <div id="spinny"><img src="CSS/spinny.gif" /></div>
 
-    <div id="currentFrequencies" class="slide">
-        <div class="dataDelay">Data may be up to 6 minutes old</div>
-        <h1>Current Frequencies</h1>
-        <table id="currentFrequencyTable">
-            <tr>
-                <td>StationName</td>
-                <td class="variable">0.000</td>
-            </tr>
-        </table>
-    </div>
-
-    <div id="totalQsos" class="slide">
+      <div id="totalQsos" class="slide">
         <div class="dataDelay">Data may be up to 6 minutes old</div>
         <h1>Total QSOs</h1>
         <div class="centered">
@@ -71,6 +60,19 @@
         <h1>News</h1>
         <p id="newsText">No news</p>
     </div>
+
+     <div id="currentFrequencies" class="slide">
+        <p id="currentFrequencyTable">
+          <span class="station">StationName <span class="variable">0.000</span></span>
+          <span class="station">StationName <span class="variable">0.000</span></span>
+            <span class="station">StationName <span class="variable">0.000</span></span>
+            <span class="station">StationName <span class="variable">0.000</span></span>
+            <span class="station">StationName <span class="variable">0.000</span></span>
+            <span class="station">StationName <span class="variable">0.000</span></span>
+        </p>
+    </div>
+
+ 
 
     <script type="text/javascript">
         $(document).ready(function () {
