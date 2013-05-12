@@ -41,6 +41,11 @@ $result = array("frequencies"=>$frequencies,"totals"=>$totals,"topOps"=>$topOps,
 $json = json_encode($result);
 
 file_put_contents($pathToJson,$json);
-twitterFeedToHtml($feedTerms);
+
+// twitter
+$feedTermsArray = split(" ",$feedTerms);
+twitterFeedToHtml($feedTerms[0], "news");
+twitterFeedToHtml($feedTerms[1], "news2");
+
 
 ?>

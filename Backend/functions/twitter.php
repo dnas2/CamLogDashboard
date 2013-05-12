@@ -1,5 +1,5 @@
 ﻿<?php
-function twitterFeedToHtml($feedTerms)
+function twitterFeedToHtml($feedTerms, $divId)
 {
     global $pathToNews;
     $url = "http://search.twitter.com/search.atom?q=" . str_replace(" ","+",$feedTerms);
@@ -22,6 +22,7 @@ function twitterFeedToHtml($feedTerms)
         $author = strip_tags($xml->entry[$i]->author->name);
         $feedHtml .= "<p class=\"smaller\">".$tweet."<br />- " . $author . "</p>";
     }
-    file_put_contents($pathToNews,$feedHtml);
+    // (news).html in $PathToNews is a placeholder, replaced with the divId
+    file_put_contents(str_replace("news",$divId,$pathToNews),$feedHtml);
 }
 ?>

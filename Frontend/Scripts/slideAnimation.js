@@ -4,12 +4,12 @@
 
 
 function doAnimation() {
-    var slides = new Array("totalQsos", "qsosByOp", "modeSplit", "news");
+    var slides = new Array("totalQsos", "qsosByOp", "modeSplit", "news", "news2");
     // There are five slides, each is visible for 12 seconds, depending on the current number of seconds in the time
     var d = new Date();
     var n = d.getSeconds();
     // Convert the current number of seconds to a slide:
-    n = Math.floor(n / 15);
+    n = Math.floor(n / 12);
     // Hide the old slide
     var oldSlide = n - 1;
     if (oldSlide < 0) { oldSlide = 3; }
