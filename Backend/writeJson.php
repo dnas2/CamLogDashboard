@@ -44,8 +44,8 @@ file_put_contents($pathToJson,$json);
 
 // twitter
 $feedTermsArray = explode(" ",$feedTerms);
-twitterFeedToHtml($feedTerms[0], "news");
-twitterFeedToHtml($feedTerms[1], "news2");
+twitterFeedToHtml($feedTermsArray[0], "news");
+twitterFeedToHtml($feedTermsArray[1], "news2");
 
 
 ?>

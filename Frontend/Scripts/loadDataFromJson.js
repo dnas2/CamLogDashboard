@@ -79,6 +79,7 @@
     });
 
     $("#newsText").load("news.html");
+    $("#news2Text").load("news2.html");
     setTimeout(reloadData, 300000); // Reload every 5 mins = 300,000 ms
 }
 
