@@ -2,7 +2,7 @@
 function twitterFeedToHtml($feedTerms, $divId)
 {
     global $pathToNews;
-    $url = "http://search.twitter.com/search.atom?q=" . str_replace(" ","+",$feedTerms);
+    $url = "http://search.twitter.com/search.atom?q=" . $feedTerms;
     $fopen_feed = @fopen($url, "r");
     //Make sure fopen was successful
     if ($fopen_feed) {

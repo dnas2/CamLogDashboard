@@ -43,7 +43,7 @@ $json = json_encode($result);
 file_put_contents($pathToJson,$json);
 
 // twitter
-$feedTermsArray = split(" ",$feedTerms);
+$feedTermsArray = explode(" ",$feedTerms);
 twitterFeedToHtml($feedTerms[0], "news");
 twitterFeedToHtml($feedTerms[1], "news2");
 
