@@ -61,6 +61,7 @@
     <Content Include="data.js" />
     <Content Include="index.html" />
     <Content Include="news.html" />
+    <Content Include="news2.html" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-2.0.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.0.0.js" />
