@@ -54,7 +54,7 @@ function getOperatorQsos() {
     }
     arsort($results);
     $top5 = array();
-    $i = 8;
+    $i = 13;
     foreach ($results as $operator => $qsos)
     {
         if ($i > 0) {
