@@ -22,13 +22,23 @@
 
                 case "topOps":
                     var htmlOut = "";
+                    i = 1; // Counts the number of ops. 5 per slide max
                     $.each(typeData, function (opCall, qsos) {
+                        if (i == 6) {
+                            $("#qsosByOpTable").html(htmlOut);
+                            htmlOut = "";
+                        }
+                        else if (i == 11) {
+                            $("#qsosByOpTable2").html(htmlOut);
+                            htmlOut = "";
+                        }
                         histWidth = getHistogramWidth(1500, qsos);
                         htmlOut += "<tr><td class=\"opPhoto\"><img src=\"Photos/" + opCall.toLowerCase() + ".jpg\" height=\"82px\" /></td>";
                         htmlOut += "<td class=\"histogram\"><img src=\"CSS/bar.png\" style=\"height:82px; width:" + histWidth + "px;\" /></td>";
                         htmlOut += "<td class=\"variable\">" + qsos + "</td></tr>";
+                        i = i + 1;
                     });
-                    $("#qsosByOpTable").html(htmlOut);
+                    $("#qsosByOpTable3").html(htmlOut);
                     break;
 
                 case "modes":
