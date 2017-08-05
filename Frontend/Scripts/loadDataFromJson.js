@@ -33,7 +33,7 @@
                             htmlOut = "";
                         }
                         histWidth = getHistogramWidth(1500, qsos);
-                        htmlOut += "<tr><td class=\"opPhoto\"><img src=\"Photos/" + opCall.toLowerCase().replace(" ","_") + ".png\" height=\"82px\" /></td>";
+                        htmlOut += "<tr><td class=\"opPhoto\"><img src=\"Photos/" + opCall.toLowerCase().replace(" ","_") + ".png\" height=\"82px\" width=\"123px\" /></td>";
                         htmlOut += "<td class=\"histogram\"><img src=\"CSS/bar.png\" style=\"height:82px; width:" + histWidth + "px;\" /></td>";
                         htmlOut += "<td class=\"variable\">" + qsos + "</td></tr>";
                         i = i + 1;
