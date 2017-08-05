@@ -91,6 +91,7 @@ function getOperatorQsos($mysqlConnection) {
 		case "jr": $country = "Japan"; break;
 		case "lz": $country = "Bulgaria"; break;
 		case "lb": $country = "Norway"; break;
+		case "2w": $country = "Wales"; break;
 		default: $country = "Unknown";
 	}
 	if (array_key_exists($country, $results))
