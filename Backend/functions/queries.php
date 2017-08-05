@@ -84,6 +84,7 @@ function getOperatorQsos($mysqlConnection) {
 		case "9a": $country = "Croatia"; break;
 		case "yt": $country = "Serbia"; break;
 		case "m0": $country = "England"; break;
+		case "m1": $country = "England"; break;
 		case "sq": $country = "Poland"; break;
 		case "z6": $country = "Kosovo"; break;
 		case "dk": $country = "Germany"; break;
