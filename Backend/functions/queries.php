@@ -50,7 +50,7 @@ function getOperatorQsos($mysqlConnection) {
     $results = array();
     while ($row = mysqli_fetch_object($r)) 
     {
-        $callsign = $row->operator;
+        $callsign = strtolower($row->operator);
 	$prefix = substr($callsign, 0, 2);
 	switch ($prefix)
 	{
