@@ -7,7 +7,6 @@
 require("config.php");
 include("classes/database.php");
 include("functions/queries.php");
-include("functions/twitter.php");
 date_default_timezone_set('Europe/London');
 
 
@@ -42,10 +41,6 @@ $json = json_encode($result);
 
 file_put_contents($pathToJson,$json);
 
-// twitter
-$feedTermsArray = explode(" ",$feedTerms);
-twitterFeedToHtml($feedTermsArray[0], "news");
-twitterFeedToHtml($feedTermsArray[1], "news2");
 
 
 ?>
