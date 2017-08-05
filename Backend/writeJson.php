@@ -32,7 +32,7 @@ $topOps = getOperatorQsos($mysqlConnection);
 $modes = getModeSplit($totals['totalQsos_all'], $mysqlConnection);
 
 
-$mysql->disconnect();
+$mysql->disconnect($mysqlConnection);
 
 $meta = array("created"=>date("H:i l j F"));
 
