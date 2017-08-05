@@ -21,16 +21,16 @@ $mysqlConnection = $mysql->connect();
 if (!$mysqlConnection) {die;}
 
 // Get the station frequencies
-$frequencies = getLastQsoFrequencies();
+$frequencies = getLastQsoFrequencies($mysqlConnection);
 
 // Get the totals
-$totals = getQsoTotals();
+$totals = getQsoTotals($mysqlConnection);
 
 // Get the operator QSO totals
-$topOps = getOperatorQsos();
+$topOps = getOperatorQsos($mysqlConnection);
 
 // Gets the mode split as percentage of all QSOs
-$modes = getModeSplit($totals['totalQsos_all']);
+$modes = getModeSplit($totals['totalQsos_all'], $mysqlConnection);
 
 
 $mysql->disconnect();

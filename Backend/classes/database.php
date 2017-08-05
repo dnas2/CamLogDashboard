@@ -7,16 +7,15 @@ class Database {
     $database;
     
     function connect() {
-        $link = mysql_connect($this->host, $this->user, $this->password);
+        $link = mysqli_connect($this->host, $this->user, $this->password, $this->database);
         if (!$link) {
             return false;
         }
-        mysql_select_db($this->database, $link) or die();
         return $link;
     }
     
-    function disconnect() {
-        mysql_close();
+    function disconnect($link) {
+        mysqli_close($link);
     }
     
 }
