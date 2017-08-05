@@ -50,7 +50,49 @@ function getOperatorQsos() {
     $results = array();
     while ($row = mysql_fetch_object($r)) 
     {
-        $results[$row->operator] = $row->qsos;
+        $callsign = $row->qsos;
+	$prefix = substr($callsign, 0, 2);
+	switch ($prefix)
+	{
+		case "2e": $country = "England"; break;
+		case "iu": $country = "Italy"; break;
+		case "oe": $country = "Austria"; break;
+		case "kg": $country = "USA"; break;
+		case "f4": $country = "France"; break;
+		case "om": $country = "Slovak Republic"; break;
+		case "yo": $country = "Romania"; break;
+		case "sa": $country = "Sweden"; break;
+		case "ok": $country = "Czech Republic"; break;
+		case "zs": $country = "South Africa"; break;
+		case "lz": $country = "Bulgaria"; break;
+		case "ha": $country = "Hungary"; break;
+		case "ea": $country = "Spain"; break;
+		case "iz": $country = "Italy"; break;
+		case "dl": $country = "Germany"; break;
+		case "es": $country = "Estonia"; break;
+		case "oh": $country = "Finland"; break;
+		case "dc": $country = "Germany"; break;
+		case "yu": $country = "Serbia"; break;
+		case "zr": $country = "South Africa"; break;
+		case "es": $country = "Estonia"; break;
+		case "ly": $country = "Lithuania"; break;
+		case "je": $country = "Japan"; break;
+		case "pd": $country = "Netherlands"; break;
+		case "pa": $country = "Netherlands"; break;
+		case "7x": $country = "Algeria"; break;
+		case "on": $country = "Belgium"; break;
+		case "9a": $country = "Croatia"; break;
+		case "yt": $country = "Serbia"; break;
+		case "m0": $country = "England"; break;
+		case "sq": $country = "Poland"; break;
+		case "z6": $country = "Kosovo"; break;
+		case "dk": $country = "Germany"; break;
+		case "jr": $country = "Japan"; break;
+		case "lz": $country = "Bulgaria"; break;
+		case "lb": $country = "Norway"; break;
+		default: $country = "Unknown";
+	}
+	$results[$row->operator] = $country;
     }
     arsort($results);
     $top5 = array();
