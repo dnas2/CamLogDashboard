@@ -50,7 +50,7 @@ function getOperatorQsos($mysqlConnection) {
     $results = array();
     while ($row = mysqli_fetch_object($r)) 
     {
-        $callsign = $row->qsos;
+        $callsign = $row->operator;
 	$prefix = substr($callsign, 0, 2);
 	switch ($prefix)
 	{
@@ -92,15 +92,22 @@ function getOperatorQsos($mysqlConnection) {
 		case "lb": $country = "Norway"; break;
 		default: $country = "Unknown";
 	}
-	$results[$row->operator] = $country;
+	if (array_key_exists($country, $results))
+	{
+		$results[$country] += $row->qsos;
+	}
+	else 
+	{
+		$results[$country] = $row->qsos;
+	}
     }
     arsort($results);
     $top5 = array();
     $i = 13;
-    foreach ($results as $operator => $qsos)
+    foreach ($results as $country => $qsos)
     {
         if ($i > 0) {
-            $top5[$operator] = $qsos;
+            $top5[$country] = $qsos;
             $i--;
         }
     }
