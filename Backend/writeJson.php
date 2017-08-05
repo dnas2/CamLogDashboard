@@ -7,7 +7,6 @@
 require("config.php");
 include("classes/database.php");
 include("functions/queries.php");
-include("functions/twitter.php");
 date_default_timezone_set('Europe/London');
 
 
@@ -21,16 +20,16 @@ $mysqlConnection = $mysql->connect();
 if (!$mysqlConnection) {die;}
 
 // Get the station frequencies
-$frequencies = getLastQsoFrequencies();
+$frequencies = getLastQsoFrequencies($mysqlConnection);
 
 // Get the totals
-$totals = getQsoTotals();
+$totals = getQsoTotals($mysqlConnection);
 
 // Get the operator QSO totals
-$topOps = getOperatorQsos();
+$topOps = getOperatorQsos($mysqlConnection);
 
 // Gets the mode split as percentage of all QSOs
-$modes = getModeSplit($totals['totalQsos_all']);
+$modes = getModeSplit($totals['totalQsos_all'], $mysqlConnection);
 
 
 $mysql->disconnect();
@@ -42,10 +41,6 @@ $json = json_encode($result);
 
 file_put_contents($pathToJson,$json);
 
-// twitter
-$feedTermsArray = explode(" ",$feedTerms);
-twitterFeedToHtml($feedTermsArray[0], "news");
-twitterFeedToHtml($feedTermsArray[1], "news2");
 
 
 ?>
