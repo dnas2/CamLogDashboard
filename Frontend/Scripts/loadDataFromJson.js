@@ -42,7 +42,7 @@
                         htmlOut += "<td class=\"variable\">" + qsos + "</td></tr>";
                         i = i + 1;
                     });
-                    $("#qsosByOpTable3").html(htmlOut);
+                    $("#qsosByOpTable4").html(htmlOut);
                     break;
 
                 case "modes":
