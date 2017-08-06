@@ -105,8 +105,8 @@ function getOperatorQsos($mysqlConnection) {
 	}
     }
     arsort($results);
-    $top5 = array();
-    $i = 13;
+    /*$top5 = array();
+    $i = 26;
     foreach ($results as $country => $qsos)
     {
         if ($i > 0) {
@@ -115,6 +115,8 @@ function getOperatorQsos($mysqlConnection) {
         }
     }
     return $top5;
+    */
+    return $results;
 }
 
 
