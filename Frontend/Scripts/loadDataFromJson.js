@@ -97,7 +97,7 @@ function reloadData() {
 
 function getHistogramWidth(maxExpected, currentValue) {
     if (currentValue > maxExpected) { currentValue = maxExpected; } // Ensures the length of the bar can't overflow!
-    maxPermitted = 500; // No bar can be more than 500 px long
+    maxPermitted = 400; // No bar can be more than 500 px long
     ratio = maxPermitted / maxExpected;
     return Math.floor(currentValue * ratio);
 }
