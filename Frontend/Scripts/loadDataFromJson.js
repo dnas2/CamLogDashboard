@@ -32,6 +32,10 @@
                             $("#qsosByOpTable2").html(htmlOut);
                             htmlOut = "";
                         }
+                        else if (i == 16) {
+                            $("#qsosByOpTable3").html(htmlOut);
+                            htmlOut = "";
+                        }
                         histWidth = getHistogramWidth(1500, qsos);
                         htmlOut += "<tr><td class=\"opPhoto\"><img src=\"Photos/" + opCall.toLowerCase().replace(" ","_") + ".png\" height=\"82px\" width=\"123px\" /></td>";
                         htmlOut += "<td class=\"histogram\"><img src=\"CSS/bar.png\" style=\"height:82px; width:" + histWidth + "px;\" /></td>";
@@ -89,7 +93,7 @@ function reloadData() {
     $("#spinny").show();
     if (typeof(animationTimeout) != "undefined") {
         clearTimeout(animationTimeout);
-    }
+    }
     loadData();
     $("#spinny").hide();
     doAnimation();
