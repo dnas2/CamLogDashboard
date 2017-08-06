@@ -54,7 +54,7 @@ function getOperatorQsos($mysqlConnection) {
 	$prefix = substr($callsign, 0, 2);
 	switch ($prefix)
 	{
-		case "2e": $country = "England"; break;
+		case "2e": $country = "United Kingdom"; break;
 		case "iu": $country = "Italy"; break;
 		case "oe": $country = "Austria"; break;
 		case "kg": $country = "USA"; break;
@@ -83,15 +83,15 @@ function getOperatorQsos($mysqlConnection) {
 		case "on": $country = "Belgium"; break;
 		case "9a": $country = "Croatia"; break;
 		case "yt": $country = "Serbia"; break;
-		case "m0": $country = "England"; break;
-		case "m1": $country = "England"; break;
+		case "m0": $country = "United Kingdom"; break;
+		case "m1": $country = "United Kingdom"; break;
 		case "sq": $country = "Poland"; break;
 		case "z6": $country = "Kosovo"; break;
 		case "dk": $country = "Germany"; break;
 		case "jr": $country = "Japan"; break;
 		case "lz": $country = "Bulgaria"; break;
 		case "lb": $country = "Norway"; break;
-		case "2w": $country = "Wales"; break;
+		case "2w": $country = "United Kingdom"; break;
 		default: $country = "Unknown";
 	}
 	if (array_key_exists($country, $results))
