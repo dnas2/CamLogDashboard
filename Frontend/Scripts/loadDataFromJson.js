@@ -93,7 +93,7 @@ function reloadData() {
     $("#spinny").show();
     if (typeof(animationTimeout) != "undefined") {
         clearTimeout(animationTimeout);
-    }
+    }
     loadData();
     $("#spinny").hide();
     doAnimation();
