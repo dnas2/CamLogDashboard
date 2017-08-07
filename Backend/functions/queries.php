@@ -1,4 +1,4 @@
-﻿<?php
+﻿<?php
 
 function getLastQsoFrequencies($mysqlConnection) {
     // Ideal query, but frequencies isn't actually populated it turns out!
@@ -85,6 +85,7 @@ function getOperatorQsos($mysqlConnection) {
 		case "yt": $country = "Serbia"; break;
 		case "m0": $country = "United Kingdom"; break;
 		case "m1": $country = "United Kingdom"; break;
+		case "m6": $country = "United Kingdom"; break;
 		case "sq": $country = "Poland"; break;
 		case "sp": $country = "Poland"; break;
 		case "z6": $country = "Kosovo"; break;
