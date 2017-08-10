@@ -21,24 +21,19 @@
                     break;
 
                 case "topOps":
-                    var htmlOut = "";
-                    i = 1; // Counts the number of ops. 5 per slide max
-                    $.each(typeData, function (opCall, qsos) {
-                        if (i == 6) {
-                            $("#qsosByOpTable").html(htmlOut);
-                            htmlOut = "";
-                        }
-                        else if (i == 11) {
-                            $("#qsosByOpTable2").html(htmlOut);
-                            htmlOut = "";
-                        }
-                        histWidth = getHistogramWidth(1500, qsos);
-                        htmlOut += "<tr><td class=\"opPhoto\"><img src=\"Photos/" + opCall.toLowerCase() + ".jpg\" height=\"82px\" /></td>";
-                        htmlOut += "<td class=\"histogram\"><img src=\"CSS/bar.png\" style=\"height:82px; width:" + histWidth + "px;\" /></td>";
-                        htmlOut += "<td class=\"variable\">" + qsos + "</td></tr>";
-                        i = i + 1;
-                    });
-                    $("#qsosByOpTable3").html(htmlOut);
+                    countriesArray = ["algeria", "austria", "belgium", "bulgaria", "czech_republic", "croatia", "england", "estonia", "finland", "france", "germany", "hungary", "italy", "japan", "lithuania", "netherlands", "norway", "poland", "romania", "serbia", "slovak_republic", "south_africa", "spain", "sweden", "tunisia", "united_kingdom"];
+		    var htmlOut = "";
+		    flag1 = countriesArray[getRandomInt(0,26)];
+		    flag2 = countriesArray[getRandomInt(0,26)];
+		    flag3 = countriesArray[getRandomInt(0,26)];
+		    flag4 = countriesArray[getRandomInt(0,26)];
+		    flag5 = countriesArray[getRandomInt(0,26)];
+		    htmlOut = "<p>&nbsp;</p>";
+                    htmlOut += "<p align=\"center\"><img src=\"Photos/" + flag1 + ".jpg\" height=\"82px\" width=\"123px\" />&nbsp;<img src=\"Photos/" + flag2 + ".jpg\" height=\"82px\" width=\"123px\" />&nbsp;<img src=\"Photos/" + flag3 + ".jpg\" height=\"82px\" width=\"123px\" />&nbsp;<img src=\"Photos/" + flag4 + ".jpg\" height=\"82px\" width=\"123px\" />&nbsp;<img src=\"Photos/" + flag5 + ".jpg\" height=\"82px\" width=\"123px\" /></p>";
+		    htmlOut += "<p align=\"center\">How has your country done? Find out later...</p>";
+		    phrases = ["Well done!", "Keep it up!", "Doing good!", "Great work!"];
+		    htmlOut += "<p align=\"center\">" + phrases[getRandomInt(0,3)] + "</p>";
+                    $("#qsosByOpTable").html(htmlOut);
                     break;
 
                 case "modes":
@@ -100,4 +95,8 @@ function getHistogramWidth(maxExpected, currentValue) {
     maxPermitted = 500; // No bar can be more than 500 px long
     ratio = maxPermitted / maxExpected;
     return Math.floor(currentValue * ratio);
+}
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
