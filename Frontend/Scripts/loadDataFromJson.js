@@ -29,7 +29,7 @@
 		    flag4 = countriesArray[getRandomInt(0,26)];
 		    flag5 = countriesArray[getRandomInt(0,26)];
 		    htmlOut = "<p>&nbsp;</p>";
-                    htmlOut += "<p align=\"center\"><img src=\"Photos/" + flag1 + ".jpg\" height=\"82px\" width=\"123px\" />&nbsp;<img src=\"Photos/" + flag2 + ".jpg\" height=\"82px\" width=\"123px\" />&nbsp;<img src=\"Photos/" + flag3 + ".jpg\" height=\"82px\" width=\"123px\" />&nbsp;<img src=\"Photos/" + flag4 + ".jpg\" height=\"82px\" width=\"123px\" />&nbsp;<img src=\"Photos/" + flag5 + ".jpg\" height=\"82px\" width=\"123px\" /></p>";
+                    htmlOut += "<p align=\"center\"><img src=\"Photos/" + flag1 + ".png\" height=\"82px\" width=\"123px\" />&nbsp;<img src=\"Photos/" + flag2 + ".png\" height=\"82px\" width=\"123px\" />&nbsp;<img src=\"Photos/" + flag3 + ".png\" height=\"82px\" width=\"123px\" />&nbsp;<img src=\"Photos/" + flag4 + ".png\" height=\"82px\" width=\"123px\" />&nbsp;<img src=\"Photos/" + flag5 + ".png\" height=\"82px\" width=\"123px\" /></p>";
 		    htmlOut += "<p align=\"center\">How has your country done? Find out later...</p>";
 		    phrases = ["Well done!", "Keep it up!", "Doing good!", "Great work!"];
 		    htmlOut += "<p align=\"center\">" + phrases[getRandomInt(0,3)] + "</p>";
