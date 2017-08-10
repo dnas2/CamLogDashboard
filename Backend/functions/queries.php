@@ -66,6 +66,28 @@ function getOperatorQsos($mysqlConnection) {
 }
 
 
+function getBandQsos($totalQsos, $mysqlConnection) {
+    $q = "SELECT `band`, COUNT(*) AS qsos FROM `log` GROUP BY `band` ORDER BY qsos DESC LIMIT 5";
+    $r = mysqli_query($mysqlConnection, $q);
+    $results = array();
+    while ($row = mysqli_fetch_object($r)) 
+    {
+        $results[$row->operator] = $row->qsos;
+    }
+    arsort($results);
+    $top5 = array();
+    $i = 5;
+    foreach ($results as $band => $qsos)
+    {
+        if ($i > 0) {
+            $top5[$mode] = round($qsos/$totalQsos*100); // As percentage
+            $i--;
+        }
+    }
+    return $top5;
+}
+
+
 
 function getModeSplit($totalQsos, $mysqlConnection) {
     $q = "SELECT `mode`, COUNT(*) AS qsos FROM `log` GROUP BY `mode`";

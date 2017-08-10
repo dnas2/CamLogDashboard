@@ -31,12 +31,15 @@ $topOps = getOperatorQsos($mysqlConnection);
 // Gets the mode split as percentage of all QSOs
 $modes = getModeSplit($totals['totalQsos_all'], $mysqlConnection);
 
+// Gets the mode split as percentage of all QSOs
+$bands = getBandSplit($totals['totalQsos_all'], $mysqlConnection);
+
 
 $mysql->disconnect($mysqlConnection);
 
 $meta = array("created"=>date("H:i l j F"));
 
-$result = array("frequencies"=>$frequencies,"totals"=>$totals,"topOps"=>$topOps,"modes"=>$modes,"meta"=>$meta);
+$result = array("frequencies"=>$frequencies,"totals"=>$totals,"topOps"=>$topOps,"modes"=>$modes,"bands"=>$bands,"meta"=>$meta);
 $json = json_encode($result);
 
 file_put_contents($pathToJson,$json);
