@@ -20,7 +20,7 @@ function getLastQsoFrequencies($mysqlConnection) {
     {
         if (!array_key_exists($row->station,$results))  // Only the latest QSO can go into the array
         {
-            $results[$row->station] = $row->frequency / 1000000;
+            str_replace("-","&#8209;",$results[$row->station]) = $row->frequency / 1000000;
         }
     }
     ksort($results);

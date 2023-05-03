@@ -106,3 +106,13 @@ p#currentFrequencyTable {
 span.station {
     padding: 0px 20px;
 }
+
+div#photoCall {
+    position:relative;
+    left:-244px;
+    width:244px;
+    text-align:center;
+    overflow: hidden;
+    font-size:0.6em;
+    background-color: rgba(63, 62, 62, 0.575)
+}
