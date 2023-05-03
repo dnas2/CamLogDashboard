@@ -120,3 +120,8 @@ td.opPhoto img {
     position:relative;
     top:15px;
 }
+
+td.opPhoto {
+    position: relative;
+    top:-15px;
+}
