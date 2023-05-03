@@ -108,8 +108,9 @@ span.station {
 }
 
 div.photoCall {
-    position:relative;
-    top:-25px;
+    position:absolute;
+    width: 100%;
+    top:calc(100% - 1.6em);
     text-align:center;
     overflow: hidden;
     font-size:0.6em;
@@ -118,7 +119,6 @@ div.photoCall {
 
 td.opPhoto img {
     position:relative;
-    top:15px;
 }
 
 table#qsosByOpTable tr {
@@ -127,10 +127,8 @@ table#qsosByOpTable tr {
 }
 
 table#qsosByOpTable tr td {
-    height:82px;
-    overflow-y: hidden;
-    padding-bottom:5px;
-    margin-bottom:5px;
+
+    position: relative; /* Make this an anchor for position absolute child */
 }
 
 table#qsosByOpTable2 tr {
@@ -139,10 +137,7 @@ table#qsosByOpTable2 tr {
 }
 
 table#qsosByOpTable2 tr td {
-    height:82px;
-    overflow-y: hidden;
-    padding-bottom:5px;
-    margin-bottom:5px;
+    position: relative; /* Make this an anchor for position absolute child */
 }
 table#qsosByOpTable3 tr {
     height:82px;
@@ -150,8 +145,5 @@ table#qsosByOpTable3 tr {
 }
 
 table#qsosByOpTable3 tr td {
-    height:82px;
-    overflow-y: hidden;
-    padding-bottom:5px;
-    margin-bottom:5px;
+    position: relative; /* Make this an anchor for position absolute child */
 }
