@@ -107,7 +107,7 @@ span.station {
     padding: 0px 20px;
 }
 
-span#photoCall {
+div#photoCall {
     position:relative;
     left:-244px;
     top:-100px;
