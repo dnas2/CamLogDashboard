@@ -1,6 +1,40 @@
-﻿function loadData()
+﻿function plotLocator(ctx, locator) {
+    locator = locator.toUpperCase();
+    const canvasWidth = 1280;
+    const canvasHeight = 640;
+    let fieldLong = locator.charCodeAt(0) - 65;
+    let fieldLat = locator.charCodeAt(1) - 65;
+    let squareLong = locator.charCodeAt(2) - 48;
+    let squareLat = locator.charCodeAt(3) - 48;
+    let subLong = 0, subLat = 0;
+    if (locator.length > 4)
+    {
+        subLong = locator.charCodeAt(4) - 65;
+        subLat = locator.charCodeAt(5) - 65;
+    }
+
+    let latitude = (fieldLat * 10) + squareLat + (subLat / 24) - 90;
+    let longitude = (fieldLong * 20) + squareLong * 2 + (subLong / 12) - 180;
+
+    let x = (canvasWidth / 2) + (canvasWidth * longitude / 360);
+    let y = (canvasHeight / 2) - (canvasHeight * latitude / 180);
+    ctx.beginPath();
+    ctx.arc(x,y,3,0,2*Math.PI);
+    ctx.fill();
+    ctx.stroke();
+}
+
+function loadData()
 {
-    $.getJSON('data.js', function (data) {
+    $.getJSON('http://server/dashboardDataApi.php', function (data) {
+        var c = document.getElementById("qsoCanvas");
+        var ctx = c.getContext("2d");
+        ctx.clearRect(0,0,1280,640);
+        var basemap = document.getElementById("baseMap");
+        ctx.beginPath();
+        ctx.drawImage(basemap, 0,0);
+        ctx.fillStyle = 'red';
+
         $.each(data, function (type, typeData) {
             // Switch on the type of data
             switch (type) {
@@ -62,7 +96,11 @@
                     });
                     $("#topDxccsTable").html(htmlOut);
                     break;
-
+                case "lastLocators":
+                    typeData.forEach(function(loc) {
+                        plotLocator(ctx, loc);
+                    });
+                    break;
                 case "meta":
                     $.each(typeData, function (key, value) {
                         if (key == "created") {
