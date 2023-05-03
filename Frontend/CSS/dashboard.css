@@ -123,35 +123,35 @@ td.opPhoto img {
 
 table#qsosByOpTable tr {
     height:82px;
-    overflow-y: clip;
+    overflow-y: hidden;
 }
 
 table#qsosByOpTable tr td {
     height:82px;
-    overflow-y: clip;
+    overflow-y: hidden;
     padding-bottom:5px;
     margin-bottom:5px;
 }
 
 table#qsosByOpTable2 tr {
     height:82px;
-    overflow-y: clip;
+    overflow-y: hidden;
 }
 
 table#qsosByOpTable2 tr td {
     height:82px;
-    overflow-y: clip;
+    overflow-y: hidden;
     padding-bottom:5px;
     margin-bottom:5px;
 }
 table#qsosByOpTable3 tr {
     height:82px;
-    overflow-y: clip;
+    overflow-y: hidden;
 }
 
 table#qsosByOpTable3 tr td {
     height:82px;
-    overflow-y: clip;
+    overflow-y: hidden;
     padding-bottom:5px;
     margin-bottom:5px;
 }
