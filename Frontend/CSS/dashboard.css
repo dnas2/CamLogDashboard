@@ -109,10 +109,14 @@ span.station {
 
 div.photoCall {
     position:relative;
-    left:-244px;
-    width:244px;
+    top:-25px;
     text-align:center;
     overflow: hidden;
     font-size:0.6em;
     background-color: rgba(63, 62, 62, 0.575)
+}
+
+td.opPhoto img {
+    position:relative;
+    top:15px;
 }
