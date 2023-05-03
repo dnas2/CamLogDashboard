@@ -129,4 +129,29 @@ tr#qsosByOpTable tr {
 tr#qsosByOpTable tr td {
     height:82px;
     overflow-y: clip;
+    padding-bottom:5px;
+    margin-bottom:5px;
+}
+
+tr#qsosByOpTable2 tr {
+    height:82px;
+    overflow-y: clip;
+}
+
+tr#qsosByOpTable2 tr td {
+    height:82px;
+    overflow-y: clip;
+    padding-bottom:5px;
+    margin-bottom:5px;
+}
+tr#qsosByOpTable3 tr {
+    height:82px;
+    overflow-y: clip;
+}
+
+tr#qsosByOpTable3 tr td {
+    height:82px;
+    overflow-y: clip;
+    padding-bottom:5px;
+    margin-bottom:5px;
 }
