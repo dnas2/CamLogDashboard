@@ -121,7 +121,12 @@ td.opPhoto img {
     top:15px;
 }
 
-td.opPhoto {
-    position: relative;
-    top:-15px;
+tr#qsosByOpTable tr {
+    height:82px;
+    overflow-y: clip;
+}
+
+tr#qsosByOpTable tr td {
+    height:82px;
+    overflow-y: clip;
 }
