@@ -105,6 +105,7 @@ p#currentFrequencyTable {
 
 span.station {
     padding: 0px 20px;
+    white-space: nowrap;
 }
 
 div.photoCall {
