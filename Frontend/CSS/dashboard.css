@@ -121,35 +121,35 @@ td.opPhoto img {
     top:15px;
 }
 
-tr#qsosByOpTable tr {
+table#qsosByOpTable tr {
     height:82px;
     overflow-y: clip;
 }
 
-tr#qsosByOpTable tr td {
+table#qsosByOpTable tr td {
     height:82px;
     overflow-y: clip;
     padding-bottom:5px;
     margin-bottom:5px;
 }
 
-tr#qsosByOpTable2 tr {
+table#qsosByOpTable2 tr {
     height:82px;
     overflow-y: clip;
 }
 
-tr#qsosByOpTable2 tr td {
+table#qsosByOpTable2 tr td {
     height:82px;
     overflow-y: clip;
     padding-bottom:5px;
     margin-bottom:5px;
 }
-tr#qsosByOpTable3 tr {
+table#qsosByOpTable3 tr {
     height:82px;
     overflow-y: clip;
 }
 
-tr#qsosByOpTable3 tr td {
+table#qsosByOpTable3 tr td {
     height:82px;
     overflow-y: clip;
     padding-bottom:5px;
