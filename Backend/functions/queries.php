@@ -18,9 +18,10 @@ function getLastQsoFrequencies($mysqlConnection) {
     $r = mysqli_query($mysqlConnection, $q);
     while ($row = mysqli_fetch_object($r)) 
     {
+        $stationNonBreakingHyphen = str_replace("-","&#8209;",$row->station);
         if (!array_key_exists($row->station,$results))  // Only the latest QSO can go into the array
         {
-            str_replace("-","&#8209;",$results[$row->station]) = $row->frequency / 1000000;
+            $results[$stationNonBreakingHyphen] = $row->frequency / 1000000;
         }
     }
     ksort($results);
